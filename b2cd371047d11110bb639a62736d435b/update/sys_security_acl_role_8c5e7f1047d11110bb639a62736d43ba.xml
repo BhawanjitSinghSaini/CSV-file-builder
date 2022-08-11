@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 08:22:18</sys_created_on>
+        <sys_id>8c5e7f1047d11110bb639a62736d43ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_234274_build_c_0_build_setup.x_234274_build_c_0.admin</sys_name>
+        <sys_package display_value="Build CSV file" source="x_234274_build_c_0">b2cd371047d11110bb639a62736d435b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_security_acl display_value="x_234274_build_c_0_build_setup">005e7f1047d11110bb639a62736d43b8</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_8c5e7f1047d11110bb639a62736d43ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 08:22:18</sys_updated_on>
+        <sys_user_role display_value="x_234274_build_c_0.admin" name="x_234274_build_c_0.admin">7acd371047d11110bb639a62736d4361</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
