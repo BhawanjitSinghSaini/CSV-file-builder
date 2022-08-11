@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description/>
+        <internal_name>generate_csv_file</internal_name>
+        <label_cache>[{"name":"d54106b6-c331-4808-bf49-3ba388bff94b.__dont_treat_as_error__","label":"5 - Delete Attachment➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d54106b6-c331-4808-bf49-3ba388bff94b.__action_status__","label":"5 - Delete Attachment➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.name","label":"Trigger - Record Created➛Build setup Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"x_234274_build_c_0_build_setup","column_name":"name"},{"name":"274adb02-ea64-48e3-ad44-1a9c39633ee7.__dont_treat_as_error__","label":"6 - Add Attachment to record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4b76e937-510a-4d43-a1b6-63cf26b892ee"}},{"name":"274adb02-ea64-48e3-ad44-1a9c39633ee7.__action_status__","label":"6 - Add Attachment to record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDddb7b0ac03951110337196ea5ee24a3b","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"ec6f4801-e68c-44ce-9105-be9520c627a6"}},{"name":"274adb02-ea64-48e3-ad44-1a9c39633ee7.attachment","label":"6 - Add Attachment to record➛Attachment","reference_display":"Attachment","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"f0ef5530-d831-47c9-b55e-0c6033b63c52"}},{"name":"dc528ef2-a1a8-485f-9edd-f9e267b7712a.row","label":"3 - Append Data to CSV file➛Row","reference_display":"Row","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"bf656ffa-45e6-414f-832e-e480b99bd610"}},{"name":"dc528ef2-a1a8-485f-9edd-f9e267b7712a.__dont_treat_as_error__","label":"3 - Append Data to CSV file➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"de40558e-170e-4d0a-8392-750cf2c4302f"}},{"name":"dc528ef2-a1a8-485f-9edd-f9e267b7712a.__action_status__","label":"3 - Append Data to CSV file➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDbe00f824b39511101c917011b1132ad0","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"e0476305-b543-47a6-a10d-acce20007d99"}},{"name":"b3a6c6d1-1d7b-4416-8eac-bd0044042e9e.row","label":"5 - Append Data to CSV file➛Row","reference_display":"Row","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"bf656ffa-45e6-414f-832e-e480b99bd610"}},{"name":"b3a6c6d1-1d7b-4416-8eac-bd0044042e9e.__dont_treat_as_error__","label":"5 - Append Data to CSV file➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"de40558e-170e-4d0a-8392-750cf2c4302f"}},{"name":"b3a6c6d1-1d7b-4416-8eac-bd0044042e9e.__action_status__","label":"5 - Append Data to CSV file➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDbe00f824b39511101c917011b1132ad0","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"e0476305-b543-47a6-a10d-acce20007d99"}},{"name":"c1610760-0f3c-4876-939c-be67f40ed7c4.item","label":"5 - For Each➛Records","reference_display":"Records","type":"document_id","base_type":"document_id","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"78bbc29c-8443-421f-b2ab-57801f878d6e.__dont_treat_as_error__","label":"1 - Create Header➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"d40a6a9d-6489-4a1b-a7dd-89d3b8b985c4"}},{"name":"78bbc29c-8443-421f-b2ab-57801f878d6e.__action_status__","label":"1 - Create Header➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDdb68e8e84b551110382e35a253724fd3","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"eacf669d-43d7-4a93-8d1a-ebb6f186b636"}},{"name":"78bbc29c-8443-421f-b2ab-57801f878d6e.file_header","label":"1 - Create Header➛File Header","reference_display":"File Header","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"d4564fef-dc98-4ebf-b406-dffa472d2934"}},{"name":"01ab75d1-c7b0-4b4d-a409-2bba12d13ae5.__action_status__","label":"2 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"01ab75d1-c7b0-4b4d-a409-2bba12d13ae5.__dont_treat_as_error__","label":"2 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.fields","label":"Trigger - Record Created➛Build setup Record➛Fields","reference":"","reference_display":"Fields","type":"choice","base_type":"choice","parent_table_name":"x_234274_build_c_0_build_setup","column_name":"fields","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"rawLabel":"-- None --","image":"","missing":false,"value":""}]},{"name":"386c746a-9b86-49e1-b1ba-92a00c1867ca.__action_status__","label":"3 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"386c746a-9b86-49e1-b1ba-92a00c1867ca.__dont_treat_as_error__","label":"3 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.condition","label":"Trigger - Record Created➛Build setup Record➛Condition","reference":"","reference_display":"Condition","type":"conditions","base_type":"conditions","parent_table_name":"x_234274_build_c_0_build_setup","column_name":"condition"},{"name":"697d87c3-e7a2-4b60-afed-a1df2371af5a.__action_status__","label":"3 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"697d87c3-e7a2-4b60-afed-a1df2371af5a.__dont_treat_as_error__","label":"3 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.table","label":"Trigger - Record Created➛Build setup Record➛Table","reference":"","reference_display":"Table","type":"table_name","base_type":"table_name","parent_table_name":"x_234274_build_c_0_build_setup","column_name":"table"},{"name":"37b831a0-742a-4df2-b71d-c0c372554d21.Records","label":"4 - Look Up Records➛Records","reference_display":"Records","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"37b831a0-742a-4df2-b71d-c0c372554d21.Table","label":"4 - Look Up Records➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"37b831a0-742a-4df2-b71d-c0c372554d21.Count","label":"4 - Look Up Records➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"37b831a0-742a-4df2-b71d-c0c372554d21.__action_status__","label":"4 - Look Up Records➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"37b831a0-742a-4df2-b71d-c0c372554d21.__dont_treat_as_error__","label":"4 - Look Up Records➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ac191dce-3136-4160-9299-eb22848beaa2.__action_status__","label":"5 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ac191dce-3136-4160-9299-eb22848beaa2.__dont_treat_as_error__","label":"5 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.csv_file","label":"Flow Variables➛CSV File","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d781cf54-a79e-48cb-986a-0fa557969c82"}},{"name":"Created_1.current","label":"Trigger - Record Created➛Build setup Record","reference":"x_234274_build_c_0_build_setup","reference_display":"Build setup","type":"reference","base_type":"reference","attributes":{}},{"name":"Created_1.current.sort_by","label":"Trigger - Record Created➛Build setup Record➛Sort By","reference":"","reference_display":"Sort By","type":"choice","base_type":"choice","parent_table_name":"x_234274_build_c_0_build_setup","column_name":"sort_by","choices":[{"label":"-- None --","used":false,"reference":false,"selected":false,"rawLabel":"-- None --","image":"","missing":false,"value":""}]},{"name":"Created_1.current.sort_type","label":"Trigger - Record Created➛Build setup Record➛Sort Type","reference":"","reference_display":"Sort Type","type":"choice","base_type":"choice","parent_table_name":"x_234274_build_c_0_build_setup","column_name":"sort_type","choices":[{"used":false,"label":"Descending","reference":false,"selected":false,"rawLabel":"Descending","image":"","missing":false,"value":"desc","parameters":{"name":"x_234274_build_c_0_build_setup"}},{"used":false,"label":"Ascending","reference":false,"selected":false,"rawLabel":"Ascending","image":"","missing":false,"value":"asc","parameters":{"name":"x_234274_build_c_0_build_setup"}}]},{"name":"Created_1.current.row_limit","label":"Trigger - Record Created➛Build setup Record➛Row Limit","reference":"","reference_display":"Row Limit","type":"integer","base_type":"integer","parent_table_name":"x_234274_build_c_0_build_setup","column_name":"row_limit"}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Generate CSV file</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 09:55:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ce839ca447151110bb639a62736d436a</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Generate CSV file</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Build CSV file" source="x_234274_build_c_0">b2cd371047d11110bb639a62736d435b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_update_name>sys_hub_flow_ce839ca447151110bb639a62736d436a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:33</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=ce839ca447151110bb639a62736d436a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ce839ca447151110bb639a62736d436a"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=ce839ca447151110bb639a62736d436a^sys_idNOT IN8b88ece847551110bb639a62736d43a2"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:26:49</sys_created_on>
+        <sys_id>8b88ece847551110bb639a62736d43a2</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:32</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8b88ece847551110bb639a62736d43a2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8b88ece847551110bb639a62736d43a2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:26:49</sys_created_on>
+        <sys_id>0f88ece847551110bb639a62736d43a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:26:49</sys_updated_on>
+        <value>x_234274_build_c_0_build_setup</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8b88ece847551110bb639a62736d43a2</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:26:49</sys_created_on>
+        <sys_id>4b88ece847551110bb639a62736d43a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:26:49</sys_updated_on>
+        <value>active=true</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=ce839ca447151110bb639a62736d436a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=ce839ca447151110bb639a62736d436a^sys_idNOT IN86839ca447151110bb639a62736d436b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>ce839ca447151110bb639a62736d436a</id>
+        <name>Generate CSV file</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 09:55:00</sys_created_on>
+        <sys_id>86839ca447151110bb639a62736d436b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 09:55:00</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=86839ca447151110bb639a62736d436b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=ce839ca447151110bb639a62736d436a^sys_idNOT INcb88ece847551110bb639a62736d439d,f288ece847551110bb639a62736d4399"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</model>
+        <model_id>ce839ca447151110bb639a62736d436a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ce839ca447151110bb639a62736d436a</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:26:49</sys_created_on>
+        <sys_id>cb88ece847551110bb639a62736d439d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:26:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</model>
+        <model_id>ce839ca447151110bb639a62736d436a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_ce839ca447151110bb639a62736d436a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:26:49</sys_created_on>
+        <sys_id>f288ece847551110bb639a62736d4399</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:26:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=ce839ca447151110bb639a62736d436a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ce839ca447151110bb639a62736d436a"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=ce839ca447151110bb639a62736d436a^sys_idNOT IN0ad27ce447951110bb639a62736d4309,1c9bbce047d51110bb639a62736d43b4,5f083cac47951110bb639a62736d432c,ded8a42c47551110bb639a62736d439c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Append Data to CSV file">ee00f82447951110bb639a62736d43a9</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:49</sys_created_on>
+        <sys_id>0ad27ce447951110bb639a62736d4309</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:33</sys_updated_on>
+        <ui_id>dc528ef2-a1a8-485f-9edd-f9e267b7712a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0ad27ce447951110bb639a62736d4309"/>
+    <sys_element_mapping action="delete_multiple" query="id=0ad27ce447951110bb639a62736d4309"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>0ad27ce447951110bb639a62736d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:49</sys_created_on>
+        <sys_id>46d27ce447951110bb639a62736d430b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:11:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ee00f82447951110bb639a62736d43a9</table>
+        <value>{{Created_1.current.condition}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>0ad27ce447951110bb639a62736d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:49</sys_created_on>
+        <sys_id>0ad27ce447951110bb639a62736d430b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:11:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ee00f82447951110bb639a62736d43a9</table>
+        <value>{{Created_1.current.fields}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>order_type</field>
+        <id>0ad27ce447951110bb639a62736d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 13:36:21</sys_created_on>
+        <sys_id>ac36c9ec47d51110bb639a62736d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:36:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ee00f82447951110bb639a62736d43a9</table>
+        <value>{{Created_1.current.sort_type}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>row_limit</field>
+        <id>0ad27ce447951110bb639a62736d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 13:36:21</sys_created_on>
+        <sys_id>2836c9ec47d51110bb639a62736d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:36:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ee00f82447951110bb639a62736d43a9</table>
+        <value>{{Created_1.current.row_limit}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sort_by</field>
+        <id>0ad27ce447951110bb639a62736d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 13:36:21</sys_created_on>
+        <sys_id>e836c9ec47d51110bb639a62736d43bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:36:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ee00f82447951110bb639a62736d43a9</table>
+        <value>{{Created_1.current.sort_by}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>0ad27ce447951110bb639a62736d4309</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:49</sys_created_on>
+        <sys_id>cad27ce447951110bb639a62736d430b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:11:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ee00f82447951110bb639a62736d43a9</table>
+        <value>{{Created_1.current.table}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0ad27ce447951110bb639a62736d4309"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0ad27ce447951110bb639a62736d4309"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Attachment">bdc2a0170f973300dfd3694e68767e47</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</flow>
+        <order>5</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:49:55</sys_created_on>
+        <sys_id>1c9bbce047d51110bb639a62736d43b4</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:33</sys_updated_on>
+        <ui_id>d54106b6-c331-4808-bf49-3ba388bff94b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1c9bbce047d51110bb639a62736d43b4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1c9bbce047d51110bb639a62736d43b4</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:49:56</sys_created_on>
+        <sys_id>149bbce047d51110bb639a62736d43b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:49:56</sys_updated_on>
+        <value>x_234274_build_c_0_build_setup</value>
+        <variable display_value="Table">79c2a0170f973300dfd3694e68767e50</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1c9bbce047d51110bb639a62736d43b4</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:49:56</sys_created_on>
+        <sys_id>189bbce047d51110bb639a62736d43b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:49:56</sys_updated_on>
+        <value/>
+        <variable display_value="Source Record">7dc2a0170f973300dfd3694e68767e48</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1c9bbce047d51110bb639a62736d43b4</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:49:56</sys_created_on>
+        <sys_id>509bbce047d51110bb639a62736d43b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:49:56</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Delete All Attachments?">b1c2a0170f973300dfd3694e68767e5a</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1c9bbce047d51110bb639a62736d43b4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>delete_all_</field>
+        <id>1c9bbce047d51110bb639a62736d43b4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:49:55</sys_created_on>
+        <sys_id>1c9bbce047d51110bb639a62736d43b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:49:55</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bdc2a0170f973300dfd3694e68767e47</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>1c9bbce047d51110bb639a62736d43b4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:49:56</sys_created_on>
+        <sys_id>949bbce047d51110bb639a62736d43b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:49:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bdc2a0170f973300dfd3694e68767e47</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>1c9bbce047d51110bb639a62736d43b4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:49:56</sys_created_on>
+        <sys_id>d09bbce047d51110bb639a62736d43b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:49:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bdc2a0170f973300dfd3694e68767e47</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1c9bbce047d51110bb639a62736d43b4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1c9bbce047d51110bb639a62736d43b4"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Add Attachment to record">89b7b0ac47951110bb639a62736d430b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</flow>
+        <order>6</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:34:33</sys_created_on>
+        <sys_id>5f083cac47951110bb639a62736d432c</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:33</sys_updated_on>
+        <ui_id>274adb02-ea64-48e3-ad44-1a9c39633ee7</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5f083cac47951110bb639a62736d432c"/>
+    <sys_element_mapping action="delete_multiple" query="id=5f083cac47951110bb639a62736d432c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>data</field>
+        <id>5f083cac47951110bb639a62736d432c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:34:34</sys_created_on>
+        <sys_id>9b083cac47951110bb639a62736d432e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:34:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89b7b0ac47951110bb639a62736d430b</table>
+        <value>{{flow_variable.csv_file}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>file_name</field>
+        <id>5f083cac47951110bb639a62736d432c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:34:34</sys_created_on>
+        <sys_id>5f083cac47951110bb639a62736d432e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:34:34</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89b7b0ac47951110bb639a62736d430b</table>
+        <value>{{Created_1.current.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5f083cac47951110bb639a62736d432c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:34:46</sys_created_on>
+        <sys_id>62187cac47951110bb639a62736d43e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:34:46</sys_updated_on>
+        <table>var__m_sys_hub_action_input_89b7b0ac47951110bb639a62736d430b</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5f083cac47951110bb639a62736d432c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5f083cac47951110bb639a62736d432c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Header">4768e8e847551110bb639a62736d43ab</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:28:08</sys_created_on>
+        <sys_id>ded8a42c47551110bb639a62736d439c</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:32</sys_updated_on>
+        <ui_id>78bbc29c-8443-421f-b2ab-57801f878d6e</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ded8a42c47551110bb639a62736d439c"/>
+    <sys_element_mapping action="delete_multiple" query="id=ded8a42c47551110bb639a62736d439c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>ded8a42c47551110bb639a62736d439c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:28:08</sys_created_on>
+        <sys_id>56d8a42c47551110bb639a62736d439e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:28:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4768e8e847551110bb639a62736d43ab</table>
+        <value>{{Created_1.current.fields}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>ded8a42c47551110bb639a62736d439c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:28:08</sys_created_on>
+        <sys_id>1ad8a42c47551110bb639a62736d439e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:28:08</sys_updated_on>
+        <table>var__m_sys_hub_action_input_4768e8e847551110bb639a62736d43ab</table>
+        <value>{{Created_1.current.table}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ded8a42c47551110bb639a62736d439c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ded8a42c47551110bb639a62736d439c"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=ce839ca447151110bb639a62736d436a"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=ce839ca447151110bb639a62736d436a^sys_idNOT IN46d23ce447951110bb639a62736d43ff,86d27ce447951110bb639a62736d430c"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">0ad23ce447951110bb639a62736d43fe</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>csv_file</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:48</sys_created_on>
+        <sys_id>46d23ce447951110bb639a62736d43ff</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:33</sys_updated_on>
+        <ui_id>6f651ec9-36e8-4dbd-8349-4ef7bb7abe15</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=46d23ce447951110bb639a62736d43ff"/>
+    <sys_element_mapping action="delete_multiple" query="id=46d23ce447951110bb639a62736d43ff"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>csv_file</field>
+        <id>46d23ce447951110bb639a62736d43ff</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:48</sys_created_on>
+        <sys_id>82d27ce447951110bb639a62736d4303</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:11:48</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_ce839ca447151110bb639a62736d436a</table>
+        <value>{{78bbc29c-8443-421f-b2ab-57801f878d6e.file_header}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=46d23ce447951110bb639a62736d43ff"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=46d23ce447951110bb639a62736d43ff"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">02d27ce447951110bb639a62736d430c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</flow>
+        <flow_variable/>
+        <flow_variables_assigned>csv_file</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:49</sys_created_on>
+        <sys_id>86d27ce447951110bb639a62736d430c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:33</sys_updated_on>
+        <ui_id>aa16342c-62c9-4838-92dc-60b62ef7b996</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=86d27ce447951110bb639a62736d430c"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_ce839ca447151110bb639a62736d436a^id=86d27ce447951110bb639a62736d430c"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=86d27ce447951110bb639a62736d430c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=86d27ce447951110bb639a62736d430c^sys_idNOT IN46d27ce447951110bb639a62736d430d"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>csv_file</input_name>
+        <instance>86d27ce447951110bb639a62736d430c</instance>
+        <referenced_table>sys_hub_flow_logic</referenced_table>
+        <script>{"csv_file":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n*/\n\nvar csv \u003d fd_data.flow_var.csv_file + fd_data._3__append_data_to_csv_file.row\nreturn csv;"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:49</sys_created_on>
+        <sys_id>46d27ce447951110bb639a62736d430d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 13:41:33</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=ce839ca447151110bb639a62736d436a"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=ce839ca447151110bb639a62736d436a^sys_idNOT IN06d23ce447951110bb639a62736d43f6"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d781cf54-a79e-48cb-986a-0fa557969c82</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>csv_file</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>CSV File</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Generate CSV file">ce839ca447151110bb639a62736d436a</model>
+        <model_id>ce839ca447151110bb639a62736d436a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_ce839ca447151110bb639a62736d436a</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 12:11:48</sys_created_on>
+        <sys_id>06d23ce447951110bb639a62736d43f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CSV File</sys_name>
+        <sys_package display_value="Build CSV file" source="x_234274_build_c_0">b2cd371047d11110bb639a62736d435b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_06d23ce447951110bb639a62736d43f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 12:11:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_ce839ca447151110bb639a62736d436a^sys_idNOT IN0788ece847551110bb639a62736d43a0,4f88ece847551110bb639a62736d439c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ce839ca447151110bb639a62736d436a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:26:49</sys_created_on>
+        <sys_id>0788ece847551110bb639a62736d43a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Build CSV file" source="x_234274_build_c_0">b2cd371047d11110bb639a62736d435b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:26:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_ce839ca447151110bb639a62736d436a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-10 11:26:49</sys_created_on>
+        <sys_id>4f88ece847551110bb639a62736d439c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Build CSV file" source="x_234274_build_c_0">b2cd371047d11110bb639a62736d435b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Build CSV file">b2cd371047d11110bb639a62736d435b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-10 11:26:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_ce839ca447151110bb639a62736d436a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_ce839ca447151110bb639a62736d436a"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_ce839ca447151110bb639a62736d436a"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=ce839ca447151110bb639a62736d436a"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=ce839ca447151110bb639a62736d436a"/>
+</record_update>
